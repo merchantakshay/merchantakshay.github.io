@@ -193,6 +193,7 @@ section {
 }
 
 .section-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 52px;
     line-height: 1;
     letter-spacing: -0.045em;
@@ -215,12 +216,11 @@ section {
 }
 
 .profile-section .section-title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 58px;
     text-align: center;
 }
 
-.profile-divider-rule {
+.divider-rule {
     width: 64px;
     height: 2px;
     background: #111111;
@@ -286,23 +286,30 @@ section {
     max-width: 140px;
 }
 
-.section-divider {
+.divider {
     display: flex;
     align-items: center;
     gap: 22px;
-    margin-top: 75px;
 }
 
-.section-divider .divider-line {
+.divider-line {
     flex: 1;
     height: 1px;
     background: #bfbfba;
 }
 
-.section-divider .divider-mark {
+.divider-mark {
     font-size: 15px;
     color: #111111;
     line-height: 1;
+}
+
+.section-divider {
+    margin-top: 75px;
+}
+
+.experience-divider {
+    margin: 8px 0 48px;
 }
 
 
@@ -314,12 +321,6 @@ section {
     display: grid;
     grid-template-columns: 180px 1fr;
     gap: 50px;
-    padding: 50px 0;
-    border-top: 1px solid #bfbfba;
-}
-
-.experience-item:last-child {
-    border-bottom: 1px solid #bfbfba;
 }
 
 .experience-date {
@@ -328,9 +329,10 @@ section {
 }
 
 .experience-company {
-    font-size: 31px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
     font-weight: 700;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.015em;
     margin-bottom: 4px;
 }
 
@@ -376,31 +378,68 @@ section {
    EXPERTISE
 ========================================================= */
 
+#expertise .section-header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+#expertise .section-number {
+    text-align: center;
+}
+
+#expertise .section-title {
+    text-align: center;
+}
+
 .expertise-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
     border-top: 1px solid #bfbfba;
 }
 
 .expertise {
-    padding: 32px 30px 32px 0;
-    border-bottom: 1px solid #bfbfba;
+    display: flex;
+    gap: 16px;
+    padding: 28px 0;
+    border-bottom: 1px solid #d6d6d1;
 }
 
-.expertise:nth-child(even) {
-    padding-left: 30px;
-    border-left: 1px solid #bfbfba;
+.expertise-icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f7f7f5;
+}
+
+.expertise-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .expertise h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 19px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .expertise p {
     color: #666666;
     font-size: 14px;
-    max-width: 450px;
+    max-width: 420px;
 }
 
 
@@ -408,16 +447,30 @@ section {
    EDUCATION
 ========================================================= */
 
+#education .section-header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+#education .section-number {
+    text-align: center;
+}
+
+#education .section-title {
+    text-align: center;
+}
+
 .education-item {
     display: grid;
     grid-template-columns: 180px 1fr;
     gap: 50px;
-    padding: 30px 0;
-    border-top: 1px solid #bfbfba;
 }
 
-.education-item:last-child {
-    border-bottom: 1px solid #bfbfba;
+.education-divider {
+    margin: 8px 0;
 }
 
 .education-date {
@@ -426,8 +479,9 @@ section {
 }
 
 .education-degree {
-    font-size: 20px;
-    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 21px;
+    font-weight: 700;
     margin-bottom: 4px;
 }
 
@@ -447,25 +501,30 @@ section {
 
 .contact-inner {
     display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 50px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 24px;
 }
 
 .contact h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: clamp(55px, 8vw, 105px);
     line-height: 0.9;
-    letter-spacing: -0.07em;
-    margin-bottom: 45px;
+    letter-spacing: -0.03em;
+    margin-bottom: 0;
 }
 
 .contact-description {
     font-size: 19px;
     color: #666666;
-    margin-bottom: 35px;
+    max-width: 520px;
+    margin: 10px auto 15px;
 }
 
 .contact-links {
     display: flex;
+    justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
@@ -575,11 +634,6 @@ footer {
 
     .expertise-grid {
         grid-template-columns: 1fr;
-    }
-
-    .expertise:nth-child(even) {
-        padding-left: 0;
-        border-left: none;
     }
 
     .contact {
