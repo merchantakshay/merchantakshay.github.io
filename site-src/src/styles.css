@@ -204,6 +204,7 @@
 .experience-unified .company-feature{border-top:0}
 .experience-unified .company-identity{display:grid;grid-template-columns:88px minmax(0,1fr);align-items:center;gap:18px}
 .experience-unified .company-identity>img,.experience-unified .company-heading .company-identity>img{width:88px;height:58px;object-fit:contain;object-position:center;margin:0}
+.experience-unified .company-identity>img{border:0;background:transparent;padding:0;mix-blend-mode:multiply;filter:saturate(.85)}
 .experience-unified .company-identity h2{margin:7px 0 0}
 .company-secondary{margin-top:42px;padding-top:0;border-top:1px solid var(--line)}
 .company-secondary .company-heading{padding:32px 0 34px}
@@ -213,6 +214,7 @@
 .pwc-highlight .highlight-over,.pwc-highlight>div>p:not(.highlight-over),.pwc-highlight strong{margin:0!important}
 .pwc-highlight strong{text-align:right}
 .education-cards article>img,.education-cards article:nth-child(2)>img,.education-cards article:nth-child(3)>img{width:96px;height:64px;object-fit:contain;object-position:center;margin:0;padding:0}
+.education-cards article>img{border:0;background:transparent;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.1);opacity:.8}
 .education-meta{display:flex;align-items:center;gap:12px;margin-top:30px}
 .education-cards .education-meta time{margin:0}
 .education-cards .education-meta span{position:static;margin:0;padding-left:12px;border-left:1px solid var(--line)}
