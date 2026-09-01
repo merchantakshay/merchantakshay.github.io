@@ -199,3 +199,36 @@
 .city-buttons .active .city-mark{border-color:var(--accent);background:var(--accent);color:var(--paper)}
 .interest-grid .interest-copy-long p{font-size:14px;line-height:1.65;max-width:760px;margin:0 0 10px}
 .interest-grid .interest-copy-long h3{font-size:37px}
+
+/* Unified experience and education cards */
+.experience-unified .company-feature{border-top:0}
+.experience-unified .company-identity{display:grid;grid-template-columns:88px minmax(0,1fr);align-items:center;gap:18px}
+.experience-unified .company-identity>img,.experience-unified .company-heading .company-identity>img{width:88px;height:58px;object-fit:contain;object-position:center;margin:0}
+.experience-unified .company-identity h2{margin:7px 0 0}
+.company-secondary{margin-top:42px;padding-top:0;border-top:1px solid var(--line)}
+.company-secondary .company-heading{padding:32px 0 34px}
+.company-secondary .company-identity h2{font-size:clamp(31px,3.2vw,48px);letter-spacing:-.045em}
+.pwc-highlight{grid-template-columns:1fr}
+.pwc-highlight>div{min-height:220px;display:grid;grid-template-columns:170px minmax(0,1fr) 210px;align-items:center;gap:24px;padding-top:52px}
+.pwc-highlight .highlight-over,.pwc-highlight>div>p:not(.highlight-over),.pwc-highlight strong{margin:0!important}
+.pwc-highlight strong{text-align:right}
+.education-cards article>img,.education-cards article:nth-child(2)>img,.education-cards article:nth-child(3)>img{width:96px;height:64px;object-fit:contain;object-position:center;margin:0;padding:0}
+.education-meta{display:flex;align-items:center;gap:12px;margin-top:30px}
+.education-cards .education-meta time{margin:0}
+.education-cards .education-meta span{position:static;margin:0;padding-left:12px;border-left:1px solid var(--line)}
+@media(max-width:900px){.experience-unified .company-identity{grid-template-columns:72px 1fr}.experience-unified .company-identity>img,.experience-unified .company-heading .company-identity>img{width:72px;height:52px}.pwc-highlight>div{display:flex;align-items:stretch}.pwc-highlight strong{text-align:left}.company-secondary{margin-top:28px}}
+
+/* Editorial KPI ledger and consistent top-right numbering */
+.highlight-grid>div{padding:52px 24px 24px;position:relative}
+.highlight-grid b,.education-cards b,.capability-grid b{position:absolute;top:20px;right:22px;margin:0;font-size:12px;color:var(--accent)}
+.work-page .stats b{display:block;font-size:12px;color:var(--accent);font-weight:700}
+.work-page .stats.kpi-ledger{grid-template-columns:repeat(2,1fr);margin:0 0 72px;padding:0;border:0;background:transparent}
+.work-page .kpi-ledger>div{display:grid;grid-template-columns:42px 210px minmax(0,1fr);align-items:center;column-gap:16px;min-height:142px;padding:42px 24px 26px 0;position:relative;border-top:1px solid var(--line);border-right:0;text-align:left}
+.work-page .kpi-ledger>div>b{position:absolute;top:18px;right:22px;margin:0}
+.work-page .kpi-ledger>div:nth-child(odd){margin-right:28px;padding-left:0}.work-page .kpi-ledger>div:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}
+.work-page .kpi-ledger strong{font-size:52px;white-space:nowrap}
+.work-page .kpi-ledger .kpi-label{margin:0;font-size:12px;line-height:1.45;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.work-page .kpi-icon{display:grid;width:40px;height:40px;place-items:center;border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line));border-radius:50%;color:var(--accent)}
+.work-page .kpi-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:1100px){.work-page .kpi-ledger>div{grid-template-columns:40px minmax(130px,1fr);row-gap:8px}.work-page .kpi-ledger .kpi-label{grid-column:2}.work-page .kpi-ledger strong{font-size:46px}}
+@media(max-width:900px){.work-page .stats.kpi-ledger{grid-template-columns:1fr}.work-page .kpi-ledger>div:nth-child(odd){margin-right:0}.work-page .kpi-ledger>div:nth-child(even){padding-left:0;border-left:0}.work-page .kpi-ledger>div{grid-template-columns:40px minmax(0,1fr);min-height:120px}.work-page .kpi-ledger strong{font-size:42px}}
