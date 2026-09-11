@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 
-type Page = "home" | "work" | "places" | "interests" | "socials";
-const pages: Page[] = ["home", "work", "places", "interests", "socials"];
+type Page = "home" | "work" | "places" | "interests" | "projects" | "socials";
+const pages: Page[] = ["home", "work", "places", "interests", "projects", "socials"];
 const socialLinks = [
   { name:"LinkedIn", icon:"linkedin", note:"Work, writing & professional updates", href:"https://linkedin.com/in/akshaymerchant" },
   { name:"GitHub", icon:"github", note:"Code, projects & experiments", href:"https://github.com/merchantakshay" },
@@ -51,17 +51,17 @@ export default function Home() {
   const [place,setPlace] = useState("luxembourg");
   const goTo = (next:Page) => { setPage(next); window.scrollTo({top:0,behavior:"auto"}); };
   const selected = places.find(p=>p.id===place)!;
-  return <main className="site">
+  return <main className="site editorial-v2">
     <div className="canvas">
       <header className="topbar"><button className="monogram" onClick={()=>goTo("home")}>AM<span>.</span></button><nav>{pages.map(p=><button key={p} className={page===p?"active":""} onClick={()=>goTo(p)}>{p}</button>)}</nav><a className="say-hello" href="mailto:merchantakshay94@gmail.com">Say hello <Arrow/></a></header>
-      {page==="home"&&<section className="page home-page portrait-editorial">
-        <div className="eyebrow"><span><i/> Born in one place, raised in a few, at home in all of them.</span></div>
-        <div className="hero-grid"><div><h1>Akshay<br/>Merchant<span>.</span></h1></div><figure className="home-portrait"><img src="/profile.jpg" alt="Akshay Merchant"/></figure></div>
+      {page==="home"&&<section className="page home-page portrait-cinematic cover-charcoal intro-rule intro-white">
+        <div className="hero-grid"><div className="hero-title-block"><h1>Akshay<br/>Merchant<span>.</span></h1><div className="home-intro"><p>I build useful things with data, disappear into investing rabbit holes and regularly convince myself that I need another hobby. This is a collection of my work, projects, interests and stories from the places I’ve called home.</p></div></div><figure className="home-portrait"><img src="/akshay-luxembourg.webp" alt="Akshay Merchant in Luxembourg"/></figure></div>
         <div className="home-links">
           <button onClick={()=>goTo("work")}><span>Work</span><b>01</b><p>I work at the intersection of data, technology and business—building useful systems that make complex decisions simpler.</p><Arrow/></button>
           <button onClick={()=>goTo("places")}><span>Places</span><b>02</b><p>Six cities, three continents and plenty of stories along the way.</p><Arrow/></button>
           <button onClick={()=>goTo("interests")}><span>Interests</span><b>03</b><p>The things I enjoy learning, playing and getting slightly obsessed with.</p><Arrow/></button>
-          <button onClick={()=>goTo("socials")}><span>Socials</span><b>04</b><p>A few places to find my work, follow along or say hello.</p><Arrow/></button>
+          <button onClick={()=>goTo("projects")}><span>Projects</span><b>04</b><p>Ideas I became curious enough about to actually build.</p><Arrow/></button>
+          <button onClick={()=>goTo("socials")}><span>Socials</span><b>05</b><p>A few places to find my work, follow along or say hello.</p><Arrow/></button>
         </div>
         <footer className="mini-footer home-footer"><span>Luxembourg · <b>2026</b></span></footer>
       </section>}
@@ -69,10 +69,10 @@ export default function Home() {
         <Intro num="01" name="Profile" title={<>Data. Insights.<br/>Impact.</>} copy="I work at the intersection of data, technology and business—building useful systems that make complex decisions simpler."/>
         <div className="stats kpi-ledger"><div><b>01</b><span className="kpi-icon"><KpiIcon name="people"/></span><strong>75+</strong><span className="kpi-label">interviews conducted</span></div><div><b>02</b><span className="kpi-icon"><KpiIcon name="savings"/></span><strong>$10.3M</strong><span className="kpi-label">annual savings delivered</span></div><div><b>03</b><span className="kpi-icon"><KpiIcon name="time"/></span><strong>11.5K+</strong><span className="kpi-label">annual hours repurposed</span></div><div><b>04</b><span className="kpi-icon"><KpiIcon name="quality"/></span><strong>99%</strong><span className="kpi-label">data quality improvement</span></div></div>
         <section className="work-section experience-section"><p className="kicker">Experience</p><div className="editorial-experience experience-unified">
-          <article className="company-feature"><div className="company-heading"><div className="company-identity"><img src="/logo-amazon.png" alt="Amazon"/><div><span className="work-date">2019—Present</span><h2>Amazon</h2></div></div><div><p>Business Intelligence Engineer 2</p><span>USA · Luxembourg</span></div></div><div className="highlight-grid">{experienceHighlights.map(item=><div key={item.title}><b>{item.n}</b><p className="highlight-over">{item.title}</p><p>{item.copy}</p><strong>{item.impact}</strong></div>)}</div></article>
-          <article className="company-feature company-secondary"><div className="company-heading"><div className="company-identity"><img src="/logo-pwc.png" alt="PricewaterhouseCoopers"/><div><span className="work-date">2018—2019</span><h2>PricewaterhouseCoopers</h2></div></div><div><p>Experienced Associate</p><span>Risk & Compliance · USA</span></div></div><div className="highlight-grid pwc-highlight"><div><b>04</b><p className="highlight-over">Protect</p><p>Built a transaction-monitoring framework that translated complex risk patterns into clear compliance decisions.</p><strong>$10M annual exposure reduction</strong></div></div></article>
+          <article className="company-feature"><div className="company-heading"><div className="company-identity"><img src="https://raw.githubusercontent.com/merchantakshay/merchantakshay.github.io/main/logo-amazon.png" alt="Amazon"/><div><span className="work-date">2019—Present</span><h2>Amazon</h2></div></div><div><p>Business Intelligence Engineer 2</p><span>USA · Luxembourg</span></div></div><div className="highlight-grid">{experienceHighlights.map(item=><div key={item.title}><b>{item.n}</b><p className="highlight-over">{item.title}</p><p>{item.copy}</p><strong>{item.impact}</strong></div>)}</div></article>
+          <article className="company-feature company-secondary"><div className="company-heading"><div className="company-identity"><img src="https://raw.githubusercontent.com/merchantakshay/merchantakshay.github.io/main/logo-pwc.png" alt="PricewaterhouseCoopers"/><div><span className="work-date">2018—2019</span><h2>PricewaterhouseCoopers</h2></div></div><div><p>Experienced Associate</p><span>Risk & Compliance · USA</span></div></div><div className="highlight-grid pwc-highlight"><div><b>04</b><p className="highlight-over">Protect</p><p>Built a transaction-monitoring framework that translated complex risk patterns into clear compliance decisions.</p><strong>$10M annual exposure reduction</strong></div></div></article>
         </div></section>
-        <section className="work-section education-section"><p className="kicker">Education</p><div className="education-cards"><article><b>01</b><img src="/logo-lse-uniform.png" alt="London School of Economics"/><div className="education-meta"><time>2026—Present</time><span>UK</span></div><h3>AI Leadership</h3><p>London School of Economics</p></article><article><b>02</b><img src="/logo-uic-uniform.png" alt="University of Illinois Chicago"/><div className="education-meta"><time>2016—2018</time><span>USA</span></div><h3>MS Business Analytics</h3><p>University of Illinois Chicago</p></article><article><b>03</b><img src="/logo-mumbai-uniform.png" alt="University of Mumbai"/><div className="education-meta"><time>2012—2016</time><span>India</span></div><h3>BE Information Technology</h3><p>University of Mumbai</p></article></div></section>
+        <section className="work-section education-section"><p className="kicker">Education</p><div className="education-cards"><article><b>01</b><img src="https://raw.githubusercontent.com/merchantakshay/merchantakshay.github.io/main/logo-lse-uniform.png" alt="London School of Economics"/><div className="education-meta"><time>2026—Present</time><span>UK</span></div><h3>AI Leadership</h3><p>London School of Economics</p></article><article><b>02</b><img src="https://raw.githubusercontent.com/merchantakshay/merchantakshay.github.io/main/logo-uic-uniform.png" alt="University of Illinois Chicago"/><div className="education-meta"><time>2016—2018</time><span>USA</span></div><h3>MS Business Analytics</h3><p>University of Illinois Chicago</p></article><article><b>03</b><img src="https://raw.githubusercontent.com/merchantakshay/merchantakshay.github.io/main/logo-mumbai-uniform.png" alt="University of Mumbai"/><div className="education-meta"><time>2012—2016</time><span>India</span></div><h3>BE Information Technology</h3><p>University of Mumbai</p></article></div></section>
         <section className="work-section expertise-section"><p className="kicker">Expertise</p><div className="capability-grid">{capabilities.map(item=><article key={item.title}><b>{item.n}</b><span>{item.over}</span><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div></section>
       </section>}
       {page==="places"&&<section className="page places-page">
@@ -92,8 +92,14 @@ export default function Home() {
           <Interest big over="Calculated Optimism" title="Investing" copy={["I started investing at 18, and my portfolio has followed me from India to the US and Europe—occasionally growing, occasionally panicking and generally experiencing the full emotional range of international markets. Moving between countries has also given me an excuse to explore different businesses, economies and ways of investing.","Technically, I invest across equities, fixed income and cash. Realistically, equities receive most of my attention because I enjoy researching companies, understanding how they make money and convincing myself that every market dip is an exciting buying opportunity. I am investing with the hope that time, compounding and one or two spectacularly lucky decisions will eventually make “millionaire” less of an ambition and more of a description."]} n="07"/>
         </div>
       </section>}
+      {page==="projects"&&<section className="page projects-page">
+        <Intro num="04" name="Projects" title={<>Ideas, built<br/>out.</>} copy="Things I became curious enough about to turn into something real."/>
+        <div className="project-selected">
+          <article className="project-option project-curious project-compact"><b>01</b><span className="project-tone">Investment research</span><span className="project-stack-icon" aria-hidden="true"><ProjectStackIcon/></span><div className="project-compact-title"><h3>Thesis<br/><em>Stack.</em></h3></div><div className="project-compact-copy"><p>Thesis Stack is where my investing rabbit holes become structured research. It follows six ideas I keep returning to—from the infrastructure behind AI and the future of payments to clean energy, cybersecurity, robotics and space—and asks which companies may be best placed to benefit.</p><a href="https://merchantakshay.github.io/thesis-stack/" target="_blank" rel="noreferrer">See what I found <Arrow/></a></div></article>
+        </div>
+      </section>}
       {page==="socials"&&<section className="page social-page">
-        <Intro num="04" name="Socials" title={<>Find me<br/>elsewhere.</>} copy="A few places to find my work, follow along or say hello."/>
+        <Intro num="05" name="Socials" title={<>Find me<br/>elsewhere.</>} copy="A few places to find my work, follow along or say hello."/>
         <div className="social-card-layout"><div className="social-card-note"><p className="kicker">Say hello</p><span className="social-note-icon"><SocialIcon name="email"/></span><h3>The internet is better with good conversations.</h3><a href="mailto:merchantakshay94@gmail.com">Email me <Arrow/></a></div><div className="social-cards">{socialLinks.map((item,index)=><a key={item.name} href={item.href} target="_blank" rel="noreferrer"><span>{String(index+1).padStart(2,"0")}</span><span className="social-card-icon"><SocialIcon name={item.icon}/></span><h3>{item.name}</h3><p>{item.note}</p><Arrow/></a>)}</div></div>
       </section>}
     </div>
@@ -101,3 +107,4 @@ export default function Home() {
 }
 function Intro({num,name,title,copy}:{num:string,name:string,title:React.ReactNode,copy?:string}){return <div className="page-intro"><p className="kicker"><span className="section-num">{num}</span> / {name}</p><h2>{title}</h2>{copy&&<p>{copy}</p>}</div>}
 function Interest({big,over,title,copy,n}:{big?:boolean,over:string,title:string,copy:string|string[],n:string}){return <article className={`${big?"interest-feature ":""}${Array.isArray(copy)?"interest-copy-long":""}`}><span>{over}</span><h3>{title}</h3>{Array.isArray(copy)?copy.map((paragraph,index)=><p key={index}>{paragraph}</p>):<p>{copy}</p>}<b>{n}</b></article>}
+function ProjectStackIcon(){return <svg viewBox="0 0 80 80" fill="none"><path d="M40 10 69 25 40 40 11 25 40 10Z"/><path d="m16 37 24 13 24-13"/><path d="m16 50 24 13 24-13"/></svg>}
