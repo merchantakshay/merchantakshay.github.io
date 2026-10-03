@@ -488,11 +488,6 @@
 .editorial-v2 .interest-grid article:nth-child(5){grid-column:span 4}
 .editorial-v2 .interest-grid article:nth-child(6){grid-column:span 4}
 .editorial-v2 .interest-grid article:nth-child(7){grid-column:span 8}
-/* Align the Gaming divider with the first column in the row above. */
-@media(min-width:1101px){
-  .editorial-v2 .interest-grid article:nth-child(3),
-  .editorial-v2 .interest-grid article:nth-child(6){border-right-color:var(--ink)}
-}
 .editorial-v2 .interest-grid h3,
 .editorial-v2 .interest-grid .interest-copy-long h3{margin:52px 0 20px;font-size:clamp(30px,2.7vw,44px);line-height:1.05}
 .editorial-v2 .interest-grid article:nth-child(1) h3{max-width:780px;font-size:clamp(30px,2.7vw,44px)}
