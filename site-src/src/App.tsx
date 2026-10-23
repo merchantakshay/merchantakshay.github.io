@@ -1,8 +1,8 @@
 "use client";
-import { useState } from "react";
+import { createElement, useState } from "react";
 
-type Page = "home" | "work" | "places" | "interests" | "projects" | "socials";
-const pages: Page[] = ["home", "work", "places", "interests", "projects", "socials"];
+type Page = "home" | "work" | "places" | "travel" | "interests" | "projects" | "socials";
+const pages: Page[] = ["home", "work", "places", "interests", "projects", "travel", "socials"];
 const socialLinks = [
   { name:"LinkedIn", icon:"linkedin", note:"Work, writing & professional updates", href:"https://linkedin.com/in/akshaymerchant" },
   { name:"GitHub", icon:"github", note:"Code, projects & experiments", href:"https://github.com/merchantakshay" },
@@ -61,7 +61,8 @@ export default function Home() {
           <button onClick={()=>goTo("places")}><span>Places</span><b>02</b><p>Six cities, three continents and plenty of stories along the way.</p><Arrow/></button>
           <button onClick={()=>goTo("interests")}><span>Interests</span><b>03</b><p>The things I enjoy learning, playing and getting slightly obsessed with.</p><Arrow/></button>
           <button onClick={()=>goTo("projects")}><span>Projects</span><b>04</b><p>Ideas I became curious enough about to actually build.</p><Arrow/></button>
-          <button onClick={()=>goTo("socials")}><span>Socials</span><b>05</b><p>A few places to find my work, follow along or say hello.</p><Arrow/></button>
+          <button onClick={()=>goTo("travel")}><span>Travel</span><b>05</b><p>A few corners of the world that have become a part of mine.</p><Arrow/></button>
+          <button onClick={()=>goTo("socials")}><span>Socials</span><b>06</b><p>A few places to find my work, follow along or say hello.</p><Arrow/></button>
         </div>
         <footer className="mini-footer home-footer"><span>Luxembourg · <b>2026</b></span></footer>
       </section>}
@@ -98,8 +99,9 @@ export default function Home() {
           <article className="project-option project-curious project-compact"><b>01</b><span className="project-tone">Investment research</span><span className="project-stack-icon" aria-hidden="true"><ProjectStackIcon/></span><div className="project-compact-title"><h3>Thesis<br/><em>Stack.</em></h3></div><div className="project-compact-copy"><p>Thesis Stack is where my investing rabbit holes become structured research. It follows six ideas I keep returning to—from the infrastructure behind AI and the future of payments to clean energy, cybersecurity, robotics and space—and asks which companies may be best placed to benefit.</p><a href="https://merchantakshay.github.io/thesis-stack/" target="_blank" rel="noreferrer">See what I found <Arrow/></a></div></article>
         </div>
       </section>}
+      {page==="travel"&&createElement("travel-atlas")}
       {page==="socials"&&<section className="page social-page">
-        <Intro num="05" name="Socials" title={<>Find me<br/>elsewhere.</>} copy="A few places to find my work, follow along or say hello."/>
+        <Intro num="06" name="Socials" title={<>Find me<br/>elsewhere.</>} copy="A few places to find my work, follow along or say hello."/>
         <div className="social-card-layout"><div className="social-card-note"><p className="kicker">Say hello</p><span className="social-note-icon"><SocialIcon name="email"/></span><h3>The internet is better with good conversations.</h3><a href="mailto:merchantakshay94@gmail.com">Email me <Arrow/></a></div><div className="social-cards">{socialLinks.map((item,index)=><a key={item.name} href={item.href} target="_blank" rel="noreferrer"><span>{String(index+1).padStart(2,"0")}</span><span className="social-card-icon"><SocialIcon name={item.icon}/></span><h3>{item.name}</h3><p>{item.note}</p><Arrow/></a>)}</div></div>
       </section>}
     </div>
