@@ -1,0 +1,24 @@
+/* Shared UI tokens. Illustration palettes remain part of the artwork. */
+:root{--site-paper:#f4f1e8;--site-ink:#171714;--site-accent:#ed5b36;--site-muted:#66655f;--site-line:#1717142e;--site-sans:Arial,Helvetica,sans-serif;--site-display:Georgia,"Times New Roman",serif}
+.editorial-v2,.editorial-v2 .page{--paper:var(--site-paper);--ink:var(--site-ink);--accent:var(--site-accent);--muted:var(--site-muted);--line:var(--site-line);--sans:var(--site-sans);--display:var(--site-display)}
+.editorial-v2 .illustrated-home{--front-clay:var(--site-accent);--front-line:var(--site-line)}
+.editorial-v2 .places-chapters{--city-clay:var(--site-accent);--city-line:var(--site-line)}
+.editorial-v2 .interests-cabinet{--cabinet-clay:var(--site-accent)}
+.editorial-v2 .projects-studio,.editorial-v2 .socials-stationery{--showcase-clay:var(--site-accent);--showcase-line:var(--site-line)}
+/* All numbered page labels share the same type treatment. */
+.editorial-v2 .page-intro .kicker,.editorial-v2 .work-editorial .profile-heading .kicker{font-family:var(--site-sans);font-size:12px;font-weight:700;line-height:1.25;letter-spacing:.16em;text-transform:uppercase;color:var(--site-accent)}
+.editorial-v2 .page .section-num{font-family:var(--site-sans);font-size:12px;font-weight:700;line-height:1;letter-spacing:.02em;color:var(--site-accent)}
+/* One quiet text color and one rule color across the page components. */
+.editorial-v2 :is(.frontpage-description,.frontpage-chapter-description,.city-story-paragraphs p,.curiosity-lead,.curiosity-paragraphs p,.research-description,.connection-card p,.work-editorial .intro,.work-editorial .highlights article p,.work-editorial .pwc-copy,.work-editorial .expertise-list p,.work-editorial .academic-school){color:var(--site-muted)}
+.editorial-v2 :is(.curiosity-card,.curiosity-story,.curiosity-card-header,.places-chapter-picker [role=tab],.city-keepsakes>span+span,.city-postmark,.research-art-heading,.email-postcard-heading){border-color:var(--site-line)}
+.editorial-v2 .places-chapter-picker [aria-selected=true]{border-color:var(--site-accent);box-shadow:inset 0 -2px 0 var(--site-accent)}
+.editorial-v2 .places-chapter-picker [aria-selected=true] .places-tab-name,.editorial-v2 .projects-studio .research-theme svg{color:var(--site-accent)}
+.editorial-v2 :is(.frontpage-chapter:hover,.connection-card:hover){background:#eee8dc;border-color:var(--site-accent)}
+.editorial-v2 .showcase-primary-link:hover{background:#39372f;transform:none}
+.editorial-v2 .page :is(button,a,summary,[role=button]):focus-visible{outline:2px solid var(--site-accent);outline-offset:4px}
+.editorial-v2 .travel-region-filters button{border-radius:0}
+.editorial-v2 .topbar nav{min-width:0}
+/* The Travel illustration uses the same image area as its neighboring home cards. */
+@media(max-width:540px){.editorial-v2 .frontpage-travel .frontpage-chapter-art{height:145px}.editorial-v2 .topbar{gap:14px}.editorial-v2 .topbar .monogram,.editorial-v2 .topbar .say-hello{flex-shrink:0}.editorial-v2 .topbar nav{flex:1}.editorial-v2 .topbar .say-hello{font-size:9px}}
+@media(max-width:350px){.editorial-v2 .frontpage-travel .frontpage-chapter-art{height:140px}}
+@media(prefers-reduced-motion:reduce){.editorial-v2 .page{animation:none}.editorial-v2 .page *{scroll-behavior:auto}}
