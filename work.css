@@ -28,3 +28,5 @@ work-editorial{display:block}.work-editorial{--paper:#f4f1e8;--ink:#171714;--mut
 /* Match the shared page introduction labels. */
 .work-editorial .profile-heading .kicker{font-family:var(--sans,Arial,Helvetica,sans-serif);font-size:12px;font-weight:700;line-height:1.25;letter-spacing:.16em;text-transform:uppercase;color:#ed5b36}
 .work-editorial .profile-heading .kicker .section-num{font-family:var(--sans,Arial,Helvetica,sans-serif);font-size:var(--editorial-index-size,12px);letter-spacing:.02em;font-weight:700;line-height:1;color:#ed5b36}
+
+.work-editorial .pwc-highlights{grid-template-columns:1fr}
