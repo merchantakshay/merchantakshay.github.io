@@ -1,10 +1,10 @@
 const homeChapters=[
- {page:'work',n:'01',name:'Work',art:'/interest-art/learning.svg',copy:'I work at the intersection of data, technology and business—building useful systems that make complex decisions simpler.'},
- {page:'places',n:'02',name:'Places',art:'/places-art/luxembourg.svg',copy:'Six cities, three continents and plenty of stories along the way.'},
- {page:'interests',n:'03',name:'Interests',art:'/interest-art/adventure.svg',copy:'The things I enjoy learning, playing and getting slightly obsessed with.'},
- {page:'projects',n:'04',name:'Projects',art:'/showcase-art/research.svg',copy:'Ideas I became curious enough about to actually build.'},
- {page:'travel',n:'05',name:'Travel',art:'/home-art/travel.svg',copy:'A few corners of the world that have become a part of mine.'},
- {page:'socials',n:'06',name:'Socials',art:'/showcase-art/email.svg',copy:'A few places to find my work, follow along or say hello.'}
+ {page:'work',n:'01',name:'Work',art:'/editorial-art/work.svg',copy:'I work at the intersection of data, technology and business—building useful systems that make complex decisions simpler.'},
+ {page:'places',n:'02',name:'Places',art:'/editorial-art/places.svg',copy:'Six cities, three continents and plenty of stories along the way.'},
+ {page:'interests',n:'03',name:'Interests',art:'/editorial-art/interests.svg',copy:'The things I enjoy learning, playing and getting slightly obsessed with.'},
+ {page:'projects',n:'04',name:'Projects',art:'/editorial-art/projects.svg',copy:'Ideas I became curious enough about to actually build.'},
+ {page:'travel',n:'05',name:'Travel',art:'/editorial-art/travel.svg',copy:'A few corners of the world that have become a part of mine.'},
+ {page:'socials',n:'06',name:'Socials',art:'/editorial-art/socials.svg',copy:'A few places to find my work, follow along or say hello.'}
 ];
 class HomeIllustrated extends HTMLElement {
  connectedCallback(){

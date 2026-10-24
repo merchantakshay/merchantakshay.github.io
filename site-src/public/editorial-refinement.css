@@ -1,0 +1,102 @@
+/* A restrained editorial treatment. Keep the warmth; reduce decorative weight. */
+.editorial-v2 .page-intro h2{font-size:clamp(58px,5.6vw,92px);line-height:.94;letter-spacing:-.045em}
+.editorial-v2 .page-intro{padding-bottom:35px;margin-bottom:35px}
+.editorial-v2 .page :is(.frontpage-chapter-art img,.curiosity-scene img,.travel-badge-art img,.connection-card img){transition:none}
+.editorial-v2 .page :is(.frontpage-chapter:hover .frontpage-chapter-art img,.curiosity-card:hover .curiosity-scene img,.travel-country-card:hover .travel-badge-art img,.connection-card:hover img){transform:none}
+/* Home: a quiet portrait and an index of the site, rather than illustrated posters. */
+.editorial-v2 .frontpage-hero{gap:60px;padding-bottom:48px;margin-bottom:32px;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+.editorial-v2 .frontpage-introduction h1{font-size:clamp(80px,8vw,125px);line-height:.9;letter-spacing:-.055em}
+.editorial-v2 .frontpage-description{font-size:16px;line-height:1.8}
+.editorial-v2 .frontpage-portrait{width:min(100%,340px);padding:0;transform:none;border:0;box-shadow:none;background:transparent}
+.editorial-v2 .frontpage-portrait img{aspect-ratio:3/4}
+.editorial-v2 .frontpage-chapters{gap:0 32px}
+.editorial-v2 .frontpage-chapter{display:grid;grid-template-columns:minmax(0,1fr) 58px;grid-template-rows:auto auto 1fr;column-gap:16px;row-gap:0;min-height:215px;align-items:start;padding:23px 0 26px;border:0;border-top:1px solid var(--line);background:transparent}
+.editorial-v2 .frontpage-chapter-top{grid-column:1/-1;grid-row:1;font-size:10px;margin-bottom:24px;color:var(--muted)}
+.editorial-v2 .frontpage-chapter-top>span:last-child{font-size:19px;color:var(--accent)}
+.editorial-v2 .frontpage-chapter-name{grid-column:1;grid-row:2;font-size:30px;line-height:1.1;margin-bottom:13px;align-self:start}
+.editorial-v2 .frontpage-chapter-description{grid-column:1;grid-row:3;font-size:12px;line-height:1.75;max-width:310px;align-self:start}
+.editorial-v2 .frontpage-chapter-art,.editorial-v2 .frontpage-travel .frontpage-chapter-art{grid-column:2;grid-row:2/4;height:58px;width:58px;padding:0;margin:0;align-self:start}
+.editorial-v2 .frontpage-chapter-art img{border:0;background:transparent;transform:none}
+.editorial-v2 .frontpage-chapter:hover{background:transparent;border-color:var(--accent)}
+.editorial-v2 .frontpage-chapter:hover .frontpage-chapter-name{color:var(--accent)}
+/* Places: simple chapter tabs and one architectural scene per story. */
+.editorial-v2 .places-chapter-picker{gap:0;margin-bottom:30px;border-bottom:1px solid var(--line)}
+.editorial-v2 .places-chapter-picker [role=tab]{border:0;background:transparent;padding:18px 12px 20px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.editorial-v2 .places-chapter-picker [role=tab]:first-child{padding-left:0}
+.editorial-v2 .places-chapter-picker [aria-selected=true]{border-color:var(--accent);box-shadow:none}
+.editorial-v2 .places-chapter-picker [role=tab]:hover{background:transparent;transform:none}
+.editorial-v2 .places-tab-top{margin-bottom:15px}
+.editorial-v2 .places-tab-top>span:last-child{display:none}
+.editorial-v2 .places-tab-name{font-size:21px;line-height:1.15}
+.editorial-v2 .places-tab-country{margin-top:9px;font-size:8px;letter-spacing:.08em}
+.editorial-v2 .city-spread{border:0;border-block:1px solid var(--line);background:transparent;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+.editorial-v2 .city-visual{background:transparent;padding:28px 28px 30px 0}
+.editorial-v2 .city-postmark{margin-inline:0;color:var(--muted);border-bottom:1px solid var(--line)}
+.editorial-v2 .city-scene{min-height:0;max-height:300px;margin:20px auto}
+.editorial-v2 .city-caption{font:normal 23px/1.2 var(--display);letter-spacing:-.025em;text-align:left;color:var(--ink);padding:0;margin:18px 0}
+.editorial-v2 .city-keepsakes{justify-content:flex-start;padding:0}
+.editorial-v2 .city-keepsakes>span{padding-left:0;padding-right:12px;font-size:10px;color:var(--muted)}
+.editorial-v2 .city-keepsakes>span+span{padding-left:12px}
+.editorial-v2 .city-story{padding:30px 0 35px 34px}
+.editorial-v2 .city-story h3{font-size:clamp(44px,4vw,64px);line-height:1;letter-spacing:-.04em}
+.editorial-v2 .city-story-paragraphs p{font-size:14px;line-height:1.9}
+/* Interests: retain the stories and visual references, remove the sticker treatment. */
+.editorial-v2 .curiosity-grid{gap:30px;align-items:start}
+.editorial-v2 .curiosity-card{padding:22px 0 26px;background:transparent;border:0;border-top:1px solid var(--line);min-height:0}
+.editorial-v2 .curiosity-card-header{border:0;padding-bottom:12px}
+.editorial-v2 .curiosity-card-header>span:first-child{color:var(--muted);font-size:9px;letter-spacing:.1em}
+.editorial-v2 .curiosity-card-header .curiosity-number{font-size:10px}
+.editorial-v2 .curiosity-scene{margin:8px 0 22px}
+.editorial-v2 .curiosity-scene img,.editorial-v2 .curiosity-gaming .curiosity-scene img{height:155px}
+.editorial-v2 .curiosity-copy h3{font-size:31px;line-height:1.1;letter-spacing:-.035em}
+.editorial-v2 .curiosity-lead{font-size:14px;line-height:1.75;margin-bottom:22px}
+.editorial-v2 .curiosity-story summary{font-size:11px;letter-spacing:.01em;color:var(--ink)}
+.editorial-v2 .curiosity-paragraphs p{font-size:13px;line-height:1.9}
+.editorial-v2 .curiosity-learning,.editorial-v2 .curiosity-investing{column-gap:30px;min-height:345px}
+.editorial-v2 .curiosity-learning .curiosity-copy,.editorial-v2 .curiosity-investing .curiosity-copy{padding-top:12px}
+.editorial-v2 .curiosity-learning .curiosity-copy h3,.editorial-v2 .curiosity-investing .curiosity-copy h3{font-size:39px;line-height:1.05}
+.editorial-v2 .curiosity-learning .curiosity-scene,.editorial-v2 .curiosity-investing .curiosity-scene{margin:8px 0 18px}
+.editorial-v2 .curiosity-learning .curiosity-scene img,.editorial-v2 .curiosity-investing .curiosity-scene img{height:210px}
+/* Projects: a research graphic with fewer visual flourishes. */
+.editorial-v2 .research-feature{border:0;border-block:1px solid var(--line);background:transparent}
+.editorial-v2 .projects-studio .research-art-panel{background:transparent;padding:26px 28px 30px 0}
+.editorial-v2 .research-art-heading{border-bottom:0;padding-bottom:0;color:var(--muted)}
+.editorial-v2 .research-art-panel>img{max-height:310px;margin:25px 0 15px}
+.editorial-v2 .research-paper-label{font:10px/1.5 var(--sans);font-style:normal;letter-spacing:.04em;border:0;transform:none;box-shadow:none;background:transparent;color:var(--muted);align-self:flex-start;padding:0}
+.editorial-v2 .research-feature-copy{padding:35px 0 35px 38px}
+.editorial-v2 .research-feature-copy h3{font-size:clamp(55px,5.5vw,82px);line-height:.92;letter-spacing:-.045em}
+.editorial-v2 .showcase-kicker{color:var(--muted);margin-bottom:23px}
+.editorial-v2 .research-description{font-size:14px;line-height:1.9}
+.editorial-v2 .research-themes{border:0;border-bottom:1px solid var(--line)}
+.editorial-v2 .research-theme{padding:25px 18px;background:transparent}
+.editorial-v2 .projects-studio .research-theme svg{width:28px;height:28px;color:#596256;margin-bottom:22px}
+.editorial-v2 .research-theme h4{font-size:18px;line-height:1.2}
+/* Socials: quiet contact links rather than illustrated postcards. */
+.editorial-v2 .connections-layout{gap:38px;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+.editorial-v2 .socials-stationery .email-postcard{background:transparent;border:0;border-right:1px solid var(--line);padding:22px 35px 25px 0;justify-content:flex-start}
+.editorial-v2 .email-postcard-heading{border-bottom:0;color:var(--muted);padding:0}
+.editorial-v2 .email-postcard-heading svg{display:none}
+.editorial-v2 .email-postcard>img{width:100px;height:100px;max-height:none;margin:30px 0 26px;align-self:flex-start}
+.editorial-v2 .email-postcard-copy{padding:0;margin-top:0}
+.editorial-v2 .email-postcard-copy h3{font-size:clamp(31px,3vw,43px);line-height:1.1;letter-spacing:-.035em;margin-bottom:27px;max-width:390px}
+.editorial-v2 .illustrated-connections{gap:0 28px}
+.editorial-v2 .socials-stationery .connection-card{border:0;border-top:1px solid var(--line);padding:19px 0 26px;background:transparent}
+.editorial-v2 .connection-card img{width:52px;height:52px;margin:22px 0 18px}
+.editorial-v2 .connection-card h3{font-size:29px;letter-spacing:-.03em;margin-bottom:13px}
+.editorial-v2 .connection-card p{font-size:12px;line-height:1.7;max-width:245px}
+.editorial-v2 .connection-card:hover{background:transparent;border-color:var(--accent)}
+.editorial-v2 .connection-card:hover h3{color:var(--accent)}
+/* Travel retains its atlas and country collection, with quieter framing. */
+.editorial-v2 .travel-map-frame{background:transparent;padding:20px 0 18px;border-top:0}
+.editorial-v2 .travel-badge-art{max-width:180px;margin-bottom:10px}
+.editorial-v2 .travel-country-card h3{font-size:23px;letter-spacing:-.03em}
+.editorial-v2 .travel-country-card>p{font-size:12px;line-height:1.7}
+@media(max-width:1100px){.editorial-v2 .frontpage-chapters{column-gap:25px}.editorial-v2 .frontpage-chapter{grid-template-columns:minmax(0,1fr) 46px}.editorial-v2 .frontpage-chapter-art,.editorial-v2 .frontpage-travel .frontpage-chapter-art{width:46px;height:46px}.editorial-v2 .frontpage-chapter-name{font-size:28px}.editorial-v2 .curiosity-learning .curiosity-copy h3,.editorial-v2 .curiosity-investing .curiosity-copy h3{font-size:34px}}
+@media(max-width:900px){.editorial-v2 .page-intro h2{font-size:52px}.editorial-v2 .frontpage-hero{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:30px}.editorial-v2 .frontpage-introduction h1{font-size:clamp(64px,8.8vw,82px)}.editorial-v2 .frontpage-description{font-size:14px}.editorial-v2 .frontpage-portrait{width:100%;max-width:290px;margin:0 auto}.editorial-v2 .places-chapter-picker{grid-template-columns:repeat(3,minmax(0,1fr))}.editorial-v2 .places-chapter-picker [role=tab]{padding:16px 12px}.editorial-v2 .city-spread{grid-template-columns:1fr}.editorial-v2 .city-visual{padding:24px 0}.editorial-v2 .city-scene{max-width:470px;max-height:260px}.editorial-v2 .city-visual-inner{position:static}.editorial-v2 .city-story{border-left:0;border-top:1px solid var(--line);padding:27px 0 30px}.editorial-v2 .research-feature-copy{border-left:0;padding:29px 0 32px}.editorial-v2 .projects-studio .research-art-panel{padding:24px 0}.editorial-v2 .research-art-panel>img{max-height:270px;margin:10px auto}.editorial-v2 .connections-layout{grid-template-columns:1fr;gap:30px}.editorial-v2 .socials-stationery .email-postcard{display:block;border-right:0;border-bottom:1px solid var(--line);padding:5px 0 30px}.editorial-v2 .email-postcard>img{width:75px;height:75px;margin:22px 0}.editorial-v2 .email-postcard-copy h3{max-width:500px;font-size:37px}.editorial-v2 .curiosity-grid{gap:26px}.editorial-v2 .curiosity-learning,.editorial-v2 .curiosity-investing{min-height:300px}}
+@media(max-width:600px){.editorial-v2 .frontpage-hero{grid-template-columns:1fr;gap:28px;padding-bottom:32px}.editorial-v2 .frontpage-introduction h1{font-size:80px}.editorial-v2 .frontpage-description{font-size:15px}.editorial-v2 .frontpage-portrait{width:72%;max-width:270px;justify-self:start;margin:0}.editorial-v2 .frontpage-chapters{grid-template-columns:1fr}.editorial-v2 .frontpage-chapter{grid-template-columns:minmax(0,1fr) 50px;min-height:0;padding:22px 0 27px}.editorial-v2 .frontpage-chapter-top{margin-bottom:20px}.editorial-v2 .frontpage-chapter-art,.editorial-v2 .frontpage-travel .frontpage-chapter-art{width:50px;height:50px}.editorial-v2 .frontpage-chapter-name{font-size:30px}.editorial-v2 .frontpage-chapter-description{max-width:290px;font-size:12px}.editorial-v2 .places-chapter-picker{display:flex;gap:0;padding:0;margin:0 0 22px}.editorial-v2 .places-chapter-picker [role=tab]{flex:0 0 145px;padding:15px 13px}.editorial-v2 .places-tab-name{font-size:21px}.editorial-v2 .city-story h3{font-size:47px}.editorial-v2 .curiosity-card{padding:22px 0 26px}.editorial-v2 .curiosity-learning,.editorial-v2 .curiosity-investing{min-height:0}.editorial-v2 .curiosity-scene img,.editorial-v2 .curiosity-gaming .curiosity-scene img,.editorial-v2 .curiosity-learning .curiosity-scene img,.editorial-v2 .curiosity-investing .curiosity-scene img{height:170px}.editorial-v2 .curiosity-copy h3,.editorial-v2 .curiosity-learning .curiosity-copy h3,.editorial-v2 .curiosity-investing .curiosity-copy h3{font-size:32px}.editorial-v2 .curiosity-learning .curiosity-copy,.editorial-v2 .curiosity-investing .curiosity-copy{padding-top:0}.editorial-v2 .curiosity-learning .curiosity-scene,.editorial-v2 .curiosity-investing .curiosity-scene{margin:8px 0 22px}.editorial-v2 .curiosity-lead{font-size:14px}.editorial-v2 .research-feature-copy h3{font-size:65px}.editorial-v2 .research-theme{padding:22px 15px}.editorial-v2 .research-themes{grid-template-columns:repeat(2,minmax(0,1fr))}.editorial-v2 .research-description{font-size:14px}.editorial-v2 .illustrated-connections{column-gap:24px}.editorial-v2 .connection-card h3{font-size:27px}.editorial-v2 .connection-card img{width:46px;height:46px;margin:20px 0 17px}.editorial-v2 .connection-card p{font-size:11px}.editorial-v2 .travel-badge-art{max-width:150px}.editorial-v2 .travel-country-card h3{font-size:22px}.editorial-v2 .travel-country-card>p{font-size:11px}}
+@media(max-width:350px){.editorial-v2 .frontpage-introduction h1{font-size:68px}.editorial-v2 .page-intro h2{font-size:46px}.editorial-v2 .illustrated-connections{grid-template-columns:1fr}}
+
+/* Keep the original layered portrait within the quieter page layout. */
+.editorial-v2 .frontpage-portrait{width:min(100%,390px);padding:12px;background:#f7f2e7;border:1px solid var(--line);transform:rotate(2deg);box-shadow:8px 10px 0 #ddd6c7}
+@media(max-width:900px){.editorial-v2 .frontpage-portrait{width:min(100%,340px);margin:10px auto 14px}}
+@media(max-width:600px){.editorial-v2 .frontpage-portrait{width:min(84%,310px);margin:8px 0 12px;padding:9px}}
