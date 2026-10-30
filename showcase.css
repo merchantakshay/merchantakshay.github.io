@@ -6,3 +6,8 @@ projects-studio,social-stationery{display:block}.projects-studio,.socials-statio
 .projects-studio .research-feature,.projects-studio .research-art-panel,.projects-studio .research-theme,.projects-studio .research-theme:nth-child(2n),.projects-studio .research-theme:nth-child(3n){background:#f4f1e8}.projects-studio{--showcase-clay:#b65f42}.projects-studio .research-theme svg{color:#b65f42}
 
 .socials-stationery .email-postcard,.socials-stationery .connection-card{background:#f4f1e8}.socials-stationery .connection-card:hover{background:#eee8dc}.socials-stationery .email-postcard:before{display:none}.socials-stationery .email-postcard-heading{border-bottom-style:solid}
+
+/* A consistent feature and topic row for each project. */
+.project-entry+.project-entry{margin-top:64px}
+.editorial-v2 .everyday-economics-project .research-feature-copy h3{font-size:clamp(46px,5vw,74px)}
+@media(max-width:540px){.project-entry+.project-entry{margin-top:42px}}
